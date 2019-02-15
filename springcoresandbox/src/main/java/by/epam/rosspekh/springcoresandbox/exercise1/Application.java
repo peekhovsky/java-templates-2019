@@ -1,5 +1,12 @@
 package by.epam.rosspekh.springcoresandbox.exercise1;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+@AllArgsConstructor
+@NoArgsConstructor
 public class Application {
 
     private Client client;
@@ -14,9 +21,10 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        Application application = new Application();
-        application.client = new Client("1", "Rock Roll");
-        application.logEvent("Event user 1");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+        Application application  = (Application) ctx.getBean("application");
 
+        application.logEvent("ROOOOOK 1");
+        application.logEvent("ROOOOOK 2");
     }
 }
