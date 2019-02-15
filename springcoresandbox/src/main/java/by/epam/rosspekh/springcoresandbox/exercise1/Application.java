@@ -5,19 +5,26 @@ import lombok.NoArgsConstructor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.text.DateFormat;
+import java.util.Date;
+
 @AllArgsConstructor
 @NoArgsConstructor
 public class Application {
 
     private Client client;
 
-    private ConsoleEventLogger eventLogger = new ConsoleEventLogger();
+    private EventLogger eventLogger;
+
+    private DateFormat dateFormat;
+
+    public Application(DateFormat dateFormat) {
+        this.dateFormat = dateFormat;
+    }
 
     public void logEvent(final String msg) {
-        String msgModified = msg.replaceAll(
-                client.getId(), client.getFullName());
-        eventLogger.logEvent(msgModified);
-
+        String msgModified = msg.replaceAll(client.getId(), client.getFullName());
+        eventLogger.logEvent(new Event(new Date(), dateFormat, msgModified));
     }
 
     public static void main(String[] args) {
