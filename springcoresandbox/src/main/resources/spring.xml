@@ -9,15 +9,24 @@
         <constructor-arg type="java.lang.String" value="Roock Roooock"/>
     </bean>
 
-    <bean id="fileEventLogger" class="by.epam.rosspekh.springcoresandbox.exercise1.FileEventLogger" scope="prototype" init-method="init">
+    <bean id="fileEventLogger" class="by.epam.rosspekh.springcoresandbox.exercise1.FileEventLogger"
+          scope="prototype" init-method="init">
         <constructor-arg type="java.lang.String" value="rock.txt"/>
+    </bean>
+
+    <bean id="cacheFileEventLogger" class="by.epam.rosspekh.springcoresandbox.exercise1.CacheFileEventLogger"
+          scope="prototype" init-method="init" destroy-method="destroy">
+        <constructor-arg index="0" type="java.lang.String" value="rock.txt"/>
+        <constructor-arg index="1" type="int" value="2"/>
     </bean>
 
     <bean id="application" class="by.epam.rosspekh.springcoresandbox.exercise1.Application">
         <constructor-arg ref="client"/>
-        <constructor-arg ref="fileEventLogger"/>
+        <constructor-arg ref="cacheFileEventLogger"/>
         <constructor-arg ref="dateFormat"/>
     </bean>
+
+
 
     <bean id="dateFormat" class="java.text.SimpleDateFormat">
         <constructor-arg value="dd-MM-yyyy"/>

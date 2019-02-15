@@ -18,20 +18,22 @@ public class Application {
 
     private DateFormat dateFormat;
 
-    public Application(DateFormat dateFormat) {
-        this.dateFormat = dateFormat;
-    }
-
     public void logEvent(final String msg) {
-        String msgModified = msg.replaceAll(client.getId(), client.getFullName());
+        var msgModified = msg.replaceAll(client.getId(), client.getFullName());
         eventLogger.logEvent(new Event(new Date(), dateFormat, msgModified));
     }
 
     public static void main(String[] args) {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
-        Application application  = (Application) ctx.getBean("application");
+        var ctx = new ClassPathXmlApplicationContext("spring.xml");
+        var application  = (Application) ctx.getBean("application");
 
         application.logEvent("ROOOOOK 1");
         application.logEvent("ROOOOOK 2");
+        application.logEvent("ROOOOOK 4");
+        application.logEvent("ROOOOOK 5");
+        application.logEvent("ROOOOOK 6");
+        application.logEvent("ROOOOOK 7");
+        application.logEvent("ROOOOOK 8");
+        application.logEvent("ROOOOOK 9");
     }
 }

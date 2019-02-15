@@ -7,12 +7,12 @@ import java.io.File;
 import java.io.IOException;
 
 @Slf4j
+@SuppressWarnings("WeakerAccess")
 public class FileEventLogger implements EventLogger {
 
+    protected String filename;
 
-    private String filename;
-
-    private File file;
+    protected File file;
 
     public FileEventLogger(String filename) {
         this.filename = filename;
