@@ -16,9 +16,16 @@ public class Event {
 
     private String message;
 
+    private Type type = Type.DEFAULT;
+
     @Override
     public String toString() {
        return "Date: " + dateFormat.format(date) + ", msg: " + message;
     }
 
+    public enum Type {
+        ERROR,
+        MESSAGE,
+        DEFAULT
+    }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="fileEventLogger" class="by.epam.rosspekh.springcoresandbox.exercise1.FileEventLogger"
+          scope="prototype" init-method="init">
+        <constructor-arg type="java.lang.String" value="rock.txt"/>
+    </bean>
+
+    <bean id="cacheFileEventLogger" class="by.epam.rosspekh.springcoresandbox.exercise1.CacheFileEventLogger"
+          scope="prototype" init-method="init" destroy-method="destroy">
+        <constructor-arg index="0" type="java.lang.String" value="rock.txt"/>
+        <constructor-arg index="1" type="int" value="2"/>
+    </bean>
+
+    <bean id="consoleEventLogger" class="by.epam.rosspekh.springcoresandbox.exercise1.ConsoleEventLogger"
+          scope="prototype">
+    </bean>
+
+    <bean id="combinedEventLogger" class="by.epam.rosspekh.springcoresandbox.exercise1.CombinedEventLogger"
+          scope="prototype">
+        <constructor-arg>
+            <list>
+                <ref bean="fileEventLogger"/>
+                <ref bean="cacheFileEventLogger"/>
+            </list>
+        </constructor-arg>
+    </bean>
+</beans>
