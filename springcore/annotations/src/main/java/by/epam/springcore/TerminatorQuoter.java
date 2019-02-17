@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import javax.annotation.PostConstruct;
 
 @Slf4j
+@Profiling
 public class TerminatorQuoter implements Quoter {
 
     @InjectRandomInt(min = 2, max = 10)

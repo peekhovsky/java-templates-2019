@@ -16,10 +16,10 @@ public class InjectRandomIntAnnotationBeanPostProcessor
         for (Field field : fields) {
             InjectRandomInt annotation = field.getAnnotation(InjectRandomInt.class);
             if (annotation != null) {
-                int min = annotation.min();
-                int max = annotation.max();
-                Random random = new Random();
-                int i = min + random.nextInt(max - min);
+                var min = annotation.min();
+                var max = annotation.max();
+                var random = new Random();
+                var i = min + random.nextInt(max - min);
                 field.setAccessible(true);
                 ReflectionUtils.setField(field, bean, i);
             }
