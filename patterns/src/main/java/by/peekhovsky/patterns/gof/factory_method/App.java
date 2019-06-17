@@ -1,14 +1,14 @@
-package by.peekhovsky.patterns.factory_method;
+package by.peekhovsky.patterns.gof.factory_method;
 
 
-import by.peekhovsky.patterns.factory_method.dialog.Dialog;
-import by.peekhovsky.patterns.factory_method.dialog.HtmlDialog;
-import by.peekhovsky.patterns.factory_method.dialog.WindowsDialog;
+import by.peekhovsky.patterns.gof.factory_method.dialog.Dialog;
+import by.peekhovsky.patterns.gof.factory_method.dialog.HtmlDialog;
+import by.peekhovsky.patterns.gof.factory_method.dialog.WindowsDialog;
 import lombok.extern.slf4j.Slf4j;
 
 
 @Slf4j
-public class Demo {
+public class App {
 
     private static Dialog dialog;
 

@@ -1,4 +1,4 @@
-package by.peekhovsky.patterns.factory_method.button;
+package by.peekhovsky.patterns.gof.factory_method.button;
 
 
 public interface Button {

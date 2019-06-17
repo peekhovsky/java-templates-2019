@@ -1,4 +1,4 @@
-package by.peekhovsky.patterns.abstract_factory.button;
+package by.peekhovsky.patterns.gof.abstract_factory.button;
 
 
 import lombok.extern.slf4j.Slf4j;

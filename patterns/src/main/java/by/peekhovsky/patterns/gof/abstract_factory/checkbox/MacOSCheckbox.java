@@ -1,4 +1,4 @@
-package by.peekhovsky.patterns.abstract_factory.checkbox;
+package by.peekhovsky.patterns.gof.abstract_factory.checkbox;
 
 
 import lombok.extern.slf4j.Slf4j;

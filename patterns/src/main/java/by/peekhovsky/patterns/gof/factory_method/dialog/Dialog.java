@@ -1,7 +1,7 @@
-package by.peekhovsky.patterns.factory_method.dialog;
+package by.peekhovsky.patterns.gof.factory_method.dialog;
 
 
-import by.peekhovsky.patterns.factory_method.button.Button;
+import by.peekhovsky.patterns.gof.factory_method.button.Button;
 
 public abstract class Dialog {
 

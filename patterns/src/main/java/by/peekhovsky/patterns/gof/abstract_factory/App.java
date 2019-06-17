@@ -1,10 +1,10 @@
-package by.peekhovsky.patterns.abstract_factory;
+package by.peekhovsky.patterns.gof.abstract_factory;
 
-import by.peekhovsky.patterns.abstract_factory.button.Button;
-import by.peekhovsky.patterns.abstract_factory.checkbox.Checkbox;
-import by.peekhovsky.patterns.abstract_factory.factory.Factory;
-import by.peekhovsky.patterns.abstract_factory.factory.MacOSFactory;
-import by.peekhovsky.patterns.abstract_factory.factory.WindowsFactory;
+import by.peekhovsky.patterns.gof.abstract_factory.button.Button;
+import by.peekhovsky.patterns.gof.abstract_factory.checkbox.Checkbox;
+import by.peekhovsky.patterns.gof.abstract_factory.factory.Factory;
+import by.peekhovsky.patterns.gof.abstract_factory.factory.MacOSFactory;
+import by.peekhovsky.patterns.gof.abstract_factory.factory.WindowsFactory;
 import lombok.extern.slf4j.Slf4j;
 
 
