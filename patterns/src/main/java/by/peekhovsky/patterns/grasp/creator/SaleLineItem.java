@@ -1,6 +1,7 @@
 package by.peekhovsky.patterns.grasp.creator;
 
 
+@SuppressWarnings("WeakerAccess")
 public class SaleLineItem {
 
     private Product product;

@@ -4,6 +4,8 @@ package by.peekhovsky.patterns.grasp.information_expert;
 import java.math.BigDecimal;
 import java.util.List;
 
+
+
 public class Sale {
 
     private int discountPercent;

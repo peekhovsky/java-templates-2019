@@ -3,6 +3,8 @@ package by.peekhovsky.patterns.grasp.information_expert;
 
 import java.math.BigDecimal;
 
+
+@SuppressWarnings("WeakerAccess")
 public class Product {
 
     private String name;

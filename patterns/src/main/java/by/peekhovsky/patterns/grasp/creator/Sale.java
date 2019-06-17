@@ -3,6 +3,7 @@ package by.peekhovsky.patterns.grasp.creator;
 
 import java.util.List;
 
+
 public class Sale {
 
     private int discountPercent;
